@@ -1,37 +1,16 @@
-# Seeds data into OrientDB, and develops a concept hierarchy for timeseries data.
 # Written by Michael Stewart 20947715.
+# A script to generate additional fields from a JSON input file and import data into OrientDB.
+# The output of this program will be a file that may be used to connect to an OrientDB database and import data via SQL statements.
+# Run this program using:
+# $ ruby seed_database.rb > output
+# To import data into OrientDB, use:
+# $ ./console.sh output
 
 require 'json'
 require 'date'
 require 'k_means'
 
 $model_titles = Array.new
-
-'''-Pseudocode-'''
-# 1: Parse the input file data.
-# 2: Generate SQL INSERT statements for each record.
-# 3: While doing that, generate SQL INSERT statements for any Timeseries data.
-#    -> Look at timestamp, convert it into Years, Months, Days, Hours, Minutes, Seconds (as far as possible)
-#    -> Generate a SQL INSERT statement for a new vertex for any one of these time levels that hasn't been created already
-#    -> Create an edge between the record with the timestamp, and the deepest time level's vertex
-# 4: Do the same thing for locations (addresses, etc). Might be tricky, will need separation by a symbol or something
-#    to determine the unique parts of the address.
-#    -> Example: "230|Hampden Road|Crawley|Perth|WA" would be separated into:
-#         230
-#         Hampden Road
-#         Crawley
-#         Perth
-#         WA
-#       Fields for each of these properties are created and added to the model.
-#       This will allow for the query of all houses belonging to a particular street, suburb, etc.
-#       This would work for the Rammed Earth dataset as well. A wall inside a room inside a house inside a town would be
-#       an example concept hierarchy.
-# 5: Print all of the SQL INSERT statements to a file. 
-#
-# Other considerations:
-# -> Need to account for different types of timestamps (strings, epochs etc).
-# -> GPS coordinates? Not sure how that'll work.
-'''------------'''
 
 Timestamp = Struct.new(:year, :month, :day, :hour, :minute, :second)
 $timestamp_array = Array.new
