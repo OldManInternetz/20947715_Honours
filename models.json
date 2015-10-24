@@ -1,0 +1,84 @@
+{
+    "House": {
+        "count": 50,
+        "properties": {
+            "id": "<incremental_id>",
+            "name": "<random_string>",
+            "sprinkler_num": {
+                "<random_integer>": [
+                    "1", "100"
+                ]
+            },
+            "lot_size": {
+                "<random_integer>": [
+                    300, 2000
+                ]
+            },
+            "days": {
+                "<random_string>": [
+                    "Mon & Thur", "Tues & Fri", "Wed & Sat", "Thur & Sun", "Fri & Mon", "Sat & Tues", "Sun & Wed"
+                ]
+            },
+            "address": "<random_address>"    
+        }
+    },
+    "WaterUsage": {
+        "count": 1000,
+        "properties": {
+            "id" : "<incremental_id>",
+            "timestamp": "<incremental_timestamp>",
+            "House": {
+                "1":  { "<random_integer>": [ 0, 300 ] },
+                "2":  { "<random_integer>": [ 0, 300 ] },
+                "3":  { "<random_integer>": [ 0, 300 ] },
+                "4":  { "<random_integer>": [ 0, 300 ] },
+                "5":  { "<random_integer>": [ 0, 300 ] },
+                "6":  { "<random_integer>": [ 0, 300 ] },
+                "7":  { "<random_integer>": [ 0, 300 ] },
+                "8":  { "<random_integer>": [ 0, 300 ] },
+                "9":  { "<random_integer>": [ 0, 300 ] },
+                "10": { "<random_integer>": [ 0, 300 ] },
+                "11": { "<random_integer>": [ 0, 300 ] },
+                "12": { "<random_integer>": [ 0, 300 ] },
+                "13": { "<random_integer>": [ 0, 300 ] },
+                "14": { "<random_integer>": [ 0, 300 ] },
+                "15": { "<random_integer>": [ 0, 300 ] },
+                "16": { "<random_integer>": [ 0, 300 ] },
+                "17": { "<random_integer>": [ 0, 300 ] },
+                "18": { "<random_integer>": [ 0, 300 ] },
+                "19": { "<random_integer>": [ 0, 300 ] },
+                "20": { "<random_integer>": [ 0, 300 ] },
+                "21": { "<random_integer>": [ 0, 300 ] },
+                "22": { "<random_integer>": [ 0, 300 ] },
+                "23": { "<random_integer>": [ 0, 300 ] },
+                "24": { "<random_integer>": [ 0, 300 ] },
+                "25": { "<random_integer>": [ 0, 300 ] },
+                "26": { "<random_integer>": [ 0, 300 ] },
+                "27": { "<random_integer>": [ 0, 300 ] },
+                "28": { "<random_integer>": [ 0, 300 ] },
+                "29": { "<random_integer>": [ 0, 300 ] },
+                "30": { "<random_integer>": [ 0, 300 ] },
+                "31": { "<random_integer>": [ 0, 300 ] },
+                "32": { "<random_integer>": [ 0, 300 ] },
+                "33": { "<random_integer>": [ 0, 300 ] },
+                "34": { "<random_integer>": [ 0, 300 ] },
+                "35": { "<random_integer>": [ 0, 300 ] },
+                "36": { "<random_integer>": [ 0, 300 ] },
+                "37": { "<random_integer>": [ 0, 300 ] },
+                "38": { "<random_integer>": [ 0, 300 ] },
+                "39": { "<random_integer>": [ 0, 300 ] },
+                "40": { "<random_integer>": [ 0, 300 ] },
+                "41": { "<random_integer>": [ 0, 300 ] },
+                "42": { "<random_integer>": [ 0, 300 ] },
+                "43": { "<random_integer>": [ 0, 300 ] },
+                "44": { "<random_integer>": [ 0, 300 ] },
+                "45": { "<random_integer>": [ 0, 300 ] },
+                "46": { "<random_integer>": [ 0, 300 ] },
+                "47": { "<random_integer>": [ 0, 300 ] },
+                "48": { "<random_integer>": [ 0, 300 ] },
+                "49": { "<random_integer>": [ 0, 300 ] },
+                "50": { "<random_integer>": [ 0, 300 ] }
+            }
+        }
+    }
+}
